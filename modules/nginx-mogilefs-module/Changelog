@@ -1,0 +1,18 @@
+
+Version 1.0.4
+ * Added feature: multiple $mogilefs_path variables
+ * Fixed bug: segfault on reconfiguration due to uninitialized class template (thanks to Pyry Hakulinen)
+ * Fixed bug: segfault due to modification of a constant string (thanks to Akzhan Abdulin)
+
+Version 1.0.3
+ * Added feature: directive mogilefs_class and ability to specify class of a resource
+ * Change: support for HEAD method
+ * Change: compatiblity with nginx API 0.8.11 and greater
+ * Change: size parameter is now sent with create_close command
+ * Fixed bug: create_open command and create_close command now cannot be sent to different trackers
+ * Change: imporved error handling
+
+Version 1.0.2
+ * Added feature: directive mogilefs_methods and support for PUT and DELETE methods
+ * Added feature: dynamic evaluation of tracker name
+ * Added feature: ability to pass noverify parameter to tracker
