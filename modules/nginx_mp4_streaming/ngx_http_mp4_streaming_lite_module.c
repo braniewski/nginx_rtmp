@@ -231,9 +231,9 @@ ngx_http_mp4_handler(ngx_http_request_t *r)
     }
 
     /* TODO: Win32 */
-    if (r->zero_in_uri) {
-        return NGX_DECLINED;
-    }
+#    if (r->zero_in_uri) {
+#        return NGX_DECLINED;
+#    }
 
     rc = ngx_http_discard_request_body(r);
 
