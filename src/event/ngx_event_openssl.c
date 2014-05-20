@@ -186,8 +186,9 @@ ngx_ssl_create(ngx_ssl_t *ssl, ngx_uint_t protocols, void *data)
     SSL_CTX_set_options(ssl->ctx, SSL_OP_MICROSOFT_BIG_SSLV3_BUFFER);
 
     /* this option allow a potential SSL 2.0 rollback (CAN-2005-2969) */
+#ifdef SSL_OP_MSIE_SSLV2_RSA_PADDING 
     SSL_CTX_set_options(ssl->ctx, SSL_OP_MSIE_SSLV2_RSA_PADDING);
-
+#endif 
     SSL_CTX_set_options(ssl->ctx, SSL_OP_SSLEAY_080_CLIENT_DH_BUG);
     SSL_CTX_set_options(ssl->ctx, SSL_OP_TLS_D5_BUG);
     SSL_CTX_set_options(ssl->ctx, SSL_OP_TLS_BLOCK_PADDING_BUG);
