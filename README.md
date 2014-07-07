@@ -4,6 +4,11 @@ nginx_rtmp
 Nginx  1.4.4 with mogilefs, rtmp, mp4
 
 
+Install Depts
+==========
+
+apt-get install gcc liblua5.2-dev liblua5.1-0-dev libyajl-dev libpcre3-dev openssl libssl-dev libxml2-dev libxslt1-dev libgeoip-dev geoip-database make libpam0g-dev libssl-dev expat libexpat1-dev libperl-dev
+
 Configure
 ==========
 
